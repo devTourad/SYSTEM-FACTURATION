@@ -1,64 +1,356 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🧾 Système de Facturation
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-10.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-8.1+-blue?style=for-the-badge&logo=php" alt="PHP">
+  <img src="https://img.shields.io/badge/Bootstrap-5.1-purple?style=for-the-badge&logo=bootstrap" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql" alt="MySQL">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Application complète de gestion de facturation pour les entreprises mauritaniennes</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 À propos du projet
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ce système de facturation est une application web moderne développée avec Laravel, spécialement conçue pour les entreprises mauritaniennes. Elle offre une solution complète pour la gestion des factures, clients et produits avec support multilingue (Français/Arabe) et utilisation de la devise locale MRU (Ouguiya mauritanienne).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### ✨ Fonctionnalités principales
 
-## Learning Laravel
+- **🧾 Gestion des factures** : Création, modification, suppression et génération PDF
+- **👥 Gestion des clients** : CRUD complet avec historique des factures
+- **📦 Gestion des produits** : Catalogue avec prix en MRU
+- **🌍 Multilingue** : Support Français et Arabe avec RTL
+- **📄 Génération PDF** : Factures professionnelles avec traductions
+- **🖨️ Impression** : Interface d'impression optimisée
+- **💰 Devise locale** : Utilisation de MRU (Ouguiya mauritanienne)
+- **📱 Responsive** : Interface adaptée mobile/tablette/desktop
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Installation et Configuration
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Prérequis
 
-## Laravel Sponsors
+Avant d'installer le projet, assurez-vous d'avoir les éléments suivants installés sur votre PC :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **PHP 8.1 ou supérieur** avec les extensions suivantes :
+  - BCMath PHP Extension
+  - Ctype PHP Extension
+  - Fileinfo PHP Extension
+  - JSON PHP Extension
+  - Mbstring PHP Extension
+  - OpenSSL PHP Extension
+  - PDO PHP Extension
+  - Tokenizer PHP Extension
+  - XML PHP Extension
+- **Composer** (gestionnaire de dépendances PHP)
+- **Node.js et npm** (pour les assets front-end)
+- **MySQL 8.0** ou **MariaDB 10.3+**
+- **Serveur web** (Apache, Nginx, ou utiliser le serveur intégré de Laravel)
 
-### Premium Partners
+### 📥 Installation étape par étape
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### 1. Cloner le projet
 
-## Contributing
+```bash
+# Cloner le repository
+git clone https://github.com/votre-username/facturation.git
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Aller dans le dossier du projet
+cd facturation
+```
 
-## Code of Conduct
+#### 2. Installer les dépendances PHP
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+# Installer les dépendances avec Composer
+composer install
+```
 
-## Security Vulnerabilities
+#### 3. Installer les dépendances JavaScript (optionnel)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+# Installer les dépendances npm
+npm install
 
-## License
+# Compiler les assets (si nécessaire)
+npm run dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### 4. Configuration de l'environnement
+
+```bash
+# Copier le fichier d'environnement
+cp .env.example .env
+
+# Générer la clé d'application
+php artisan key:generate
+```
+
+#### 5. Configuration de la base de données
+
+Éditez le fichier `.env` et configurez votre base de données :
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=facturation
+DB_USERNAME=votre_username
+DB_PASSWORD=votre_password
+```
+
+#### 6. Créer la base de données
+
+```sql
+-- Connectez-vous à MySQL et créez la base de données
+CREATE DATABASE facturation CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+#### 7. Exécuter les migrations
+
+```bash
+# Exécuter les migrations pour créer les tables
+php artisan migrate
+
+# (Optionnel) Ajouter des données de test
+php artisan db:seed
+```
+
+#### 8. Démarrer le serveur de développement
+
+```bash
+# Démarrer le serveur Laravel
+php artisan serve
+```
+
+L'application sera accessible à l'adresse : `http://127.0.0.1:8000`
+
+### ⚙️ Configuration avancée
+
+#### Configuration du PDF (DomPDF)
+
+Le projet utilise DomPDF pour la génération de PDF. La configuration est déjà incluse, mais vous pouvez personnaliser :
+
+```bash
+# Publier la configuration DomPDF (optionnel)
+php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
+```
+
+#### Configuration des langues
+
+Le projet supporte le français et l'arabe. Les fichiers de traduction se trouvent dans :
+- `resources/lang/fr/messages.php` (Français)
+- `resources/lang/ar/messages.php` (Arabe)
+
+#### Configuration de l'email (optionnel)
+
+Pour les notifications par email, configurez dans `.env` :
+
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=votre_email@gmail.com
+MAIL_PASSWORD=votre_mot_de_passe
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=votre_email@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+### 🔧 Commandes utiles
+
+```bash
+# Vider le cache
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+# Recréer la base de données
+php artisan migrate:fresh --seed
+
+# Générer des données de test
+php artisan db:seed
+
+# Optimiser pour la production
+php artisan optimize
+```
+
+### 🐛 Résolution des problèmes courants
+
+#### Erreur de permissions
+
+```bash
+# Sur Linux/Mac, donner les permissions aux dossiers
+sudo chmod -R 755 storage bootstrap/cache
+sudo chown -R www-data:www-data storage bootstrap/cache
+```
+
+#### Erreur de clé d'application
+
+```bash
+# Régénérer la clé d'application
+php artisan key:generate
+```
+
+#### Erreur de base de données
+
+1. Vérifiez que MySQL est démarré
+2. Vérifiez les paramètres dans `.env`
+3. Assurez-vous que la base de données existe
+
+#### Erreur de dépendances
+
+```bash
+# Réinstaller les dépendances
+composer install --no-dev --optimize-autoloader
+```
+
+## 📱 Utilisation de l'application
+
+### Interface utilisateur
+
+1. **Page d'accueil** : Liste des factures avec actions rapides
+2. **Gestion des clients** : Ajouter, modifier, supprimer des clients
+3. **Gestion des produits** : Catalogue avec prix en MRU
+4. **Création de factures** : Interface intuitive avec calcul automatique
+5. **Génération PDF** : Factures professionnelles téléchargeables
+6. **Changement de langue** : Boutons FR/AR dans la navbar
+
+### Fonctionnalités clés
+
+- **CRUD complet** pour clients, produits et factures
+- **Calcul automatique** des totaux et sous-totaux
+- **Génération PDF** avec traductions
+- **Interface responsive** pour tous les appareils
+- **Support RTL** pour l'arabe
+- **Devise MRU** (Ouguiya mauritanienne)
+
+## 🏗️ Structure du projet
+
+```
+facturation/
+├── app/
+│   ├── Http/Controllers/     # Contrôleurs
+│   ├── Models/              # Modèles Eloquent
+│   └── Http/Middleware/     # Middleware personnalisés
+├── database/
+│   ├── migrations/          # Migrations de base de données
+│   └── seeders/            # Données de test
+├── resources/
+│   ├── views/              # Templates Blade
+│   ├── lang/               # Fichiers de traduction
+│   └── css/                # Styles CSS
+├── public/
+│   ├── css/                # CSS compilés
+│   └── js/                 # JavaScript
+└── routes/
+    └── web.php             # Routes web
+```
+
+## 🌐 Support multilingue
+
+L'application supporte deux langues :
+
+- **🇫🇷 Français** : Langue par défaut
+- **🇸🇦 Arabe** : Avec support RTL complet
+
+### Ajouter une nouvelle langue
+
+1. Créer le fichier de traduction : `resources/lang/[code]/messages.php`
+2. Ajouter la langue dans `LanguageController.php`
+3. Mettre à jour la navbar dans `app.blade.php`
+
+## 💰 Devise et localisation
+
+- **Devise principale** : MRU (Ouguiya mauritanienne)
+- **Format des nombres** : Adapté à la locale
+- **Dates** : Format français/arabe selon la langue
+
+## 🔒 Sécurité
+
+- **Validation CSRF** sur tous les formulaires
+- **Validation des données** côté serveur
+- **Échappement XSS** automatique avec Blade
+- **Middleware d'authentification** (si ajouté)
+
+## 📊 Base de données
+
+### Tables principales
+
+- **clients** : Informations des clients
+- **produits** : Catalogue des produits
+- **factures** : En-têtes des factures
+- **facture_produit** : Lignes de factures (pivot)
+
+### Relations
+
+- Client → Factures (1:N)
+- Facture → Produits (N:N via pivot)
+
+## 🚀 Déploiement en production
+
+### Serveur web
+
+1. **Apache/Nginx** : Pointer vers le dossier `public/`
+2. **PHP-FPM** : Configurer pour PHP 8.1+
+3. **MySQL** : Base de données en production
+
+### Optimisations
+
+```bash
+# Optimiser pour la production
+composer install --no-dev --optimize-autoloader
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+### Variables d'environnement
+
+```env
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://votre-domaine.com
+```
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. Fork le projet
+2. Créer une branche feature (`git checkout -b feature/AmazingFeature`)
+3. Commit vos changements (`git commit -m 'Add AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
+
+## 📝 Changelog
+
+### Version 1.0.0
+- ✅ CRUD complet pour clients, produits, factures
+- ✅ Support multilingue (FR/AR) avec RTL
+- ✅ Génération PDF avec traductions
+- ✅ Interface responsive moderne
+- ✅ Devise MRU (Ouguiya mauritanienne)
+- ✅ Navbar et footer modernes
+
+## 📞 Support
+
+Pour toute question ou problème :
+
+- **Email** : contact@facturation.mr
+- **Téléphone** : +222 12 34 56 78
+- **Adresse** : Nouakchott, Mauritanie
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+<p align="center">
+  <strong>Développé avec ❤️ pour les entreprises mauritaniennes</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20in-Mauritania-green?style=for-the-badge" alt="Made in Mauritania">
+</p>
