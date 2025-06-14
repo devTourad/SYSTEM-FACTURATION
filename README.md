@@ -348,7 +348,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ---
 
 <p align="center">
-  <strong>Développé avec ❤️ pour les entreprises mauritaniennes</strong>
+  <strong>Développé par Tourad Dah pour les entreprises mauritaniennes</strong>
 </p>
 
 <p align="center">
