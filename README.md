@@ -333,13 +333,7 @@ Les contributions sont les bienvenues ! Pour contribuer :
 - ✅ Devise MRU (Ouguiya mauritanienne)
 - ✅ Navbar et footer modernes
 
-## 📞 Support
 
-Pour toute question ou problème :
-
-- **Email** : contact@facturation.mr
-- **Téléphone** : +222 12 34 56 78
-- **Adresse** : Nouakchott, Mauritanie
 
 ## 📄 Licence
 
